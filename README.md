@@ -90,6 +90,3 @@ streamlit run app.py
 | `requirements.txt` | Python packages needed to run the app |
 | `notebooks/` | The Colab notebook with all the steps |
 | `images/` | Charts used in this README |
-
-## Team
-[ADD TEAM MEMBER NAMES]
