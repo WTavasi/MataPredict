@@ -1,0 +1,7 @@
+*.zip
+zindi_raw/
+gis_data/
+waze_dataset.csv
+matatu_merged_clean.csv
+.ipynb_checkpoints/
+__pycache__/

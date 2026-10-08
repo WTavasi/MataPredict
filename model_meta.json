@@ -1,0 +1,5 @@
+{
+  "sklearn_version": "1.6.1",
+  "model": "DecisionTreeClassifier",
+  "target": "is_overcrowded (occupancy >= 0.8)"
+}
