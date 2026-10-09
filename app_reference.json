@@ -1,0 +1,158 @@
+{
+  "origins": {
+    "Awendo": {
+      "route": "Mombasa Road",
+      "route_count": 8.0,
+      "centroid_lat": -1.38018965721,
+      "centroid_lon": 36.89627492155,
+      "gis_missing": false
+    },
+    "Homa Bay": {
+      "route": "Langata Road",
+      "route_count": 2.0,
+      "centroid_lat": -1.325845835855,
+      "centroid_lon": 36.7674459906,
+      "gis_missing": false
+    },
+    "Kehancha": {
+      "route": "Mombasa Road",
+      "route_count": 8.0,
+      "centroid_lat": -1.38018965721,
+      "centroid_lon": 36.89627492155,
+      "gis_missing": false
+    },
+    "Kendu Bay": {
+      "route": "Langata Road",
+      "route_count": 2.0,
+      "centroid_lat": -1.325845835855,
+      "centroid_lon": 36.7674459906,
+      "gis_missing": false
+    },
+    "Keroka": {
+      "route": "Ngong Road",
+      "route_count": 20.0,
+      "centroid_lat": -1.32477140968,
+      "centroid_lon": 36.74286782745,
+      "gis_missing": false
+    },
+    "Keumbu": {
+      "route": "Ngong Road",
+      "route_count": 20.0,
+      "centroid_lat": -1.32477140968,
+      "centroid_lon": 36.74286782745,
+      "gis_missing": false
+    },
+    "Kijauri": {
+      "route": "Thika Road",
+      "route_count": 17.0,
+      "centroid_lat": -1.181899352225,
+      "centroid_lon": 36.92887634035,
+      "gis_missing": false
+    },
+    "Kisii": {
+      "route": "Mombasa Road",
+      "route_count": 8.0,
+      "centroid_lat": -1.38018965721,
+      "centroid_lon": 36.89627492155,
+      "gis_missing": false
+    },
+    "Mbita": {
+      "route": "Langata Road",
+      "route_count": 2.0,
+      "centroid_lat": -1.325845835855,
+      "centroid_lon": 36.7674459906,
+      "gis_missing": false
+    },
+    "Migori": {
+      "route": "Mombasa Road",
+      "route_count": 8.0,
+      "centroid_lat": -1.38018965721,
+      "centroid_lon": 36.89627492155,
+      "gis_missing": false
+    },
+    "Ndhiwa": {
+      "route": "unknown",
+      "route_count": 0.0,
+      "centroid_lat": -1.38018965721,
+      "centroid_lon": 36.89627492155,
+      "gis_missing": true
+    },
+    "Nyachenge": {
+      "route": "Mombasa Road",
+      "route_count": 8.0,
+      "centroid_lat": -1.38018965721,
+      "centroid_lon": 36.89627492155,
+      "gis_missing": false
+    },
+    "Oyugis": {
+      "route": "unknown",
+      "route_count": 0.0,
+      "centroid_lat": -1.38018965721,
+      "centroid_lon": 36.89627492155,
+      "gis_missing": true
+    },
+    "Rodi": {
+      "route": "unknown",
+      "route_count": 0.0,
+      "centroid_lat": -1.38018965721,
+      "centroid_lon": 36.89627492155,
+      "gis_missing": true
+    },
+    "Rongo": {
+      "route": "Mombasa Road",
+      "route_count": 8.0,
+      "centroid_lat": -1.38018965721,
+      "centroid_lon": 36.89627492155,
+      "gis_missing": false
+    },
+    "Sirare": {
+      "route": "Mombasa Road",
+      "route_count": 8.0,
+      "centroid_lat": -1.38018965721,
+      "centroid_lon": 36.89627492155,
+      "gis_missing": false
+    },
+    "Sori": {
+      "route": "Thika Road",
+      "route_count": 17.0,
+      "centroid_lat": -1.181899352225,
+      "centroid_lon": 36.92887634035,
+      "gis_missing": false
+    }
+  },
+  "car_types": {
+    "Bus": 49,
+    "shuttle": 11
+  },
+  "payment_methods": [
+    "Cash",
+    "Mpesa"
+  ],
+  "months": [
+    1,
+    2,
+    3,
+    4,
+    10,
+    11,
+    12
+  ],
+  "by_hour": {
+    "5": 0.14056224899598393,
+    "6": 0.24489795918367346,
+    "7": 0.08403623867541393,
+    "8": 0.5016949152542373,
+    "9": 0.5430327868852459,
+    "10": 0.555008210180624,
+    "11": 0.47126436781609193,
+    "19": 0.18222222222222223,
+    "23": 0.0
+  },
+  "by_route": {
+    "Langata Road": 0.010582010582010581,
+    "Mombasa Road": 0.28600654664484454,
+    "Ngong Road": 0.10843373493975904,
+    "Thika Road": 0.003472222222222222,
+    "unknown": 0.0
+  }
+}
