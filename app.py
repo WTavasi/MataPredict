@@ -14,12 +14,12 @@ def load_model():
 
 
 @st.cache_data
-def load_data():
-    return pd.read_csv("matatu_merged_clean.csv")
+def load_reference():
+    return json.load(open("app_reference.json"))
 
 
 model, columns = load_model()
-df = load_data()
+ref = load_reference()
 
 st.title("MataPredict: will this matatu be overcrowded?")
 tab_predict, tab_explore = st.tabs(["Predict a ride", "Explore the data"])
@@ -27,18 +27,17 @@ tab_predict, tab_explore = st.tabs(["Predict a ride", "Explore the data"])
 with tab_predict:
     left, right = st.columns(2)
     with left:
-        origin = st.selectbox("Town of origin", sorted(df["travel_from"].unique()))
-        car_type = st.selectbox("Vehicle type", sorted(df["car_type"].unique()))
-        payment = st.selectbox("Payment method", sorted(df["payment_method"].unique()))
+        origin = st.selectbox("Town of origin", sorted(ref["origins"]))
+        car_type = st.selectbox("Vehicle type", sorted(ref["car_types"]))
+        payment = st.selectbox("Payment method", ref["payment_methods"])
     with right:
         hour = st.slider("Hour of departure", 0, 23, 7)
         day = st.selectbox("Day of week", ["Monday", "Tuesday", "Wednesday", "Thursday",
                                            "Friday", "Saturday", "Sunday"])
-        month = st.selectbox("Month", sorted(df["month"].unique()))
+        month = st.selectbox("Month", ref["months"])
 
     if st.button("Predict"):
-        info = df[df["travel_from"] == origin].iloc[0]
-        capacity = df.loc[df["car_type"] == car_type, "max_capacity"].iloc[0]
+        info = ref["origins"][origin]
         ride = pd.DataFrame([{
             "route": info["route"],
             "travel_from": origin,
@@ -49,7 +48,7 @@ with tab_predict:
             "car_type": car_type,
             "payment_method": payment,
             "is_peak": int((5 <= hour <= 9) or (16 <= hour <= 20)),
-            "max_capacity": capacity,
+            "max_capacity": ref["car_types"][car_type],
             "route_count": info["route_count"],
             "centroid_lat": info["centroid_lat"],
             "centroid_lon": info["centroid_lon"],
@@ -64,7 +63,9 @@ with tab_predict:
             st.success("This ride is unlikely to be overcrowded.")
 
 with tab_explore:
+    by_hour = pd.Series(ref["by_hour"])
+    by_hour.index = by_hour.index.astype(int)
     st.subheader("Overcrowding rate by hour of day")
-    st.bar_chart(df.groupby("hour")["is_overcrowded"].mean())
+    st.bar_chart(by_hour.sort_index())
     st.subheader("Overcrowding rate by corridor")
-    st.bar_chart(df.groupby("route")["is_overcrowded"].mean())
+    st.bar_chart(pd.Series(ref["by_route"]))
